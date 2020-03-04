@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="pcoded-content">
+    <!-- [ breadcrumb ] start -->
+    <div class="page-header">
+        <div class="page-block">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="page-header-title">
+                        <h4>Issues and Challenges</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ breadcrumb ] end -->
+    <div class="pcoded-inner-content">
+        <div class="main-body">
+            <div class="page-wrapper">
+                <div class="page-body">
+                    <!-- [ page content ] start -->
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12" style="margin:0; padding:0">
+                            <div class="card table-card" style="padding:20px 20px 20px 10px">
+                                <div class="card-block">
+                                    <div class="block" style="margin-left:10px">
+                                        <div class="row">
+                                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                                <div class="row">
+                                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                                        <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">DATE:</p>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-6 col-lg-6">
+                                                        <input class="form-control own_input">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                                        <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">REFERENCE:</p>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-6 col-lg-6">
+                                                        <input class="form-control own_input">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                                <div class="row">
+                                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                                        <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">CLIENT:</p>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-6 col-lg-6">
+                                                        <input class="form-control own_input">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                                <div class="row" style="padding-bottom:10px">
+                                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                                        <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">SUBJECTS:</p>
+                                                    </div>
+                                                    <div class="col-sm-9 col-md-9 col-lg-9">
+                                                        <textarea rows="3" class="form-control" style="border:1px solid #448aff; "></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="padding-bottom:10px">
+                                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                                        <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">DETAILS:</p>
+                                                    </div>
+                                                    <div class="col-sm-9 col-md-9 col-lg-9">
+                                                        <textarea rows="3" class="form-control" style="border:1px solid #448aff; "></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="padding-bottom:10px">
+                                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                                        <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">RESOLUTIONS:</p>
+                                                    </div>
+                                                    <div class="col-sm-9 col-md-9 col-lg-9">
+                                                        <textarea rows="3" class="form-control" style="border:1px solid #448aff; "></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="row" style="padding-bottom:10px">
+                                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                                        <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">FUTURE APPROACH:</p>
+                                                    </div>
+                                                    <div class="col-sm-9 col-md-9 col-lg-9">
+                                                        <textarea rows="3" class="form-control" style="border:1px solid #448aff; "></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                                        <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">CONTRIBUTORS:</p>
+                                                    </div>
+                                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                                        <select class="form-control form-control-primary fill col-sm-12 own_select">
+                                                            <option value="">Yes</option>
+                                                            <option value="">No</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                                        <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">REVIEWED BY:</p>
+                                                    </div>
+                                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                                        <select class="form-control form-control-primary fill col-sm-12 own_select">
+                                                            <option value="">Yes</option>
+                                                            <option value="">No</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                                <p>ENTITY:</p>
+                                                <div class="border-checkbox-section">
+                                                    <div class="border-checkbox-group border-checkbox-group-primary" style="display: block">
+                                                        <input class="border-checkbox" type="checkbox" id="export">
+                                                        <label class="border-checkbox-label" style="height: 5px; font-size:10px" for="export">CLEARANCE ONLY</label>
+                                                    </div>
+                                                    <div class="border-checkbox-group border-checkbox-group-primary" style="display: block">
+                                                        <input class="border-checkbox" type="checkbox" id="import">
+                                                        <label class="border-checkbox-label" style="height: 5px; font-size:10px" for="import">CLIENT</label>
+                                                    </div>
+                                                    <div class="border-checkbox-group border-checkbox-group-primary" style="display: block">
+                                                        <input class="border-checkbox" type="checkbox" id="haulage">
+                                                        <label class="border-checkbox-label" style="height: 5px; font-size:10px" for="haulage">COMPANY</label>
+                                                    </div>
+                                                    <div class="border-checkbox-group border-checkbox-group-primary" style="display: block">
+                                                        <input class="border-checkbox" type="checkbox" id="shipping">
+                                                        <label class="border-checkbox-label" style="height: 5px; font-size:10px" for="haulage">SHIPPING LINE</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ page content ] end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- [ style Customizer ] start -->
+{#<div id="styleSelector">#}
+{#</div>#}
+<!-- [ style Customizer ] end -->
+{% endblock %}
+
+{% block script %}
+<!-- Custom js -->
+<script src="{% static 'assets/pages/data-table/js/data-table-custom.js'%}"></script>
+<script src="{% static 'assets/js/pcoded.min.js'%}"></script>
+{#<script src="{% static 'assets/js/vertical/vertical-layout.min.js'%}"></script>#}
+<script src="{% static 'assets/js/jquery.mCustomScrollbar.concat.min.js'%}"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#dashboard_table").DataTable();
+    });
+</script>
+{% endblock %}

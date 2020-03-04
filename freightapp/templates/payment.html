@@ -1,0 +1,428 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="pcoded-content">
+    <!-- [ breadcrumb ] start -->
+    <div class="page-header">
+        <div class="page-block">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="page-header-title">
+                        <h4>Payment Input</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ breadcrumb ] end -->
+    <div class="pcoded-inner-content">
+        <div class="main-body">
+            <div class="page-wrapper">
+                <div class="page-body">
+                    <!-- [ page content ] start -->
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12" style="margin:0; padding:0">
+                            <div class="card table-card" style="padding-left:20px; padding-right:20px">
+
+                                <div class="">
+                                    <div class="card-block" style="margin:4px">
+                                        <a class="on-default edit-row btn btn-primary" id="addPayment" style="padding: 5px; font-size: 12px; color:white; float: right"><i class="fa fa-plus" style="margin-right: 5px"></i>Add More</a>
+                                        <div class="dt-responsive table-responsive">
+                                            <table id="payment_table" class="table table-striped table-bordered nowrap">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Sea Clearance</th>
+                                                        <th>Debit note <br>received</th>
+                                                        <th>Amount</th>
+                                                        <th>Date of <br>payment</th>
+                                                        <th>Valid <br>Date</th>
+                                                        <th>Expiry <br>Date</th>
+                                                        <th>Set <br>Reminder</th>
+                                                        <th>Paid By</th>
+                                                        <th>Refundable</th>
+                                                        <th>Executor</th>
+                                                        <th>Upload <br>Document</th>
+                                                        <th>Options</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Shipping Line</td>
+                                                        <td></td>
+                                                        <td>N</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="select">
+                                                            <div>
+                                                                <select class="form-control form-control-primary fill col-sm-12 own_select" disabled>
+                                                                    <option value="yes">Yes</option>
+                                                                    <option value="no">No</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="actions">
+                                                            <a href="#" class="hidden on-editing save-row btn btn-warning" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-save"></i>
+                                                            </a>
+                                                            <a href="#" class="hidden on-editing cancel-row btn btn-danger" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-times"></i>
+                                                            </a>
+                                                            <a href="#" class="on-default edit-row btn btn-warning" style="padding: 0 2px 0 2px; color:white">
+                                                                <i class="fa fa-edit"></i>
+                                                            </a>
+                                                            <a href="#" class="on-default remove-row btn btn-danger" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-trash"></i>
+                                                            </a>
+{#                                                            <a  class="on-default edit-row btn btn-warning" style="padding: 0 2px 0 2px; color:white"><i class="fa fa-edit" style="margin-right: 0"></i></a>#}
+{#                                                            <a  class="on-default remove-row btn btn-danger" style="padding: 0 3px 0 3px; color:white"><i class="fa fa-trash" style="margin-right: 0"></i></a>#}
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Terminal</td>
+                                                        <td></td>
+                                                        <td>N</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="select">
+                                                            <div>
+                                                                <select class="form-control form-control-primary fill col-sm-12 own_select" disabled>
+                                                                    <option value="yes">Yes</option>
+                                                                    <option value="no">No</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="actions">
+                                                            <a href="#" class="hidden on-editing save-row btn btn-warning" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-save"></i>
+                                                            </a>
+                                                            <a href="#" class="hidden on-editing cancel-row btn btn-danger" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-times"></i>
+                                                            </a>
+                                                            <a href="#" class="on-default edit-row btn btn-warning" style="padding: 0 2px 0 2px; color:white">
+                                                                <i class="fa fa-edit"></i>
+                                                            </a>
+                                                            <a href="#" class="on-default remove-row btn btn-danger" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-trash"></i>
+                                                            </a>
+{#                                                            <a  class="on-default edit-row btn btn-warning" style="padding: 0 2px 0 2px; color:white"><i class="fa fa-edit" style="margin-right: 0"></i></a>#}
+{#                                                            <a  class="on-default remove-row btn btn-danger" style="padding: 0 3px 0 3px; color:white"><i class="fa fa-trash" style="margin-right: 0"></i></a>#}
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Haulage </td>
+                                                        <td></td>
+                                                        <td>N</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="select">
+                                                            <div>
+                                                                <select class="form-control form-control-primary fill col-sm-12 own_select" disabled>
+                                                                    <option value="yes">Yes</option>
+                                                                    <option value="no">No</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="actions">
+                                                            <a href="#" class="hidden on-editing save-row btn btn-warning" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-save"></i>
+                                                            </a>
+                                                            <a href="#" class="hidden on-editing cancel-row btn btn-danger" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-times"></i>
+                                                            </a>
+                                                            <a href="#" class="on-default edit-row btn btn-warning" style="padding: 0 2px 0 2px; color:white">
+                                                                <i class="fa fa-edit"></i>
+                                                            </a>
+                                                            <a href="#" class="on-default remove-row btn btn-danger" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-trash"></i>
+                                                            </a>
+{#                                                            <a  class="on-default edit-row btn btn-warning" style="padding: 0 2px 0 2px; color:white"><i class="fa fa-edit" style="margin-right: 0"></i></a>#}
+{#                                                            <a  class="on-default remove-row btn btn-danger" style="padding: 0 3px 0 3px; color:white"><i class="fa fa-trash" style="margin-right: 0"></i></a>#}
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Quarantine</td>
+                                                        <td></td>
+                                                        <td>N</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="select">
+                                                            <div>
+                                                                <select class="form-control form-control-primary fill col-sm-12 own_select" disabled>
+                                                                    <option value="yes">Yes</option>
+                                                                    <option value="no">No</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="actions">
+                                                            <a href="#" class="hidden on-editing save-row btn btn-warning" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-save"></i>
+                                                            </a>
+                                                            <a href="#" class="hidden on-editing cancel-row btn btn-danger" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-times"></i>
+                                                            </a>
+                                                            <a href="#" class="on-default edit-row btn btn-warning" style="padding: 0 2px 0 2px; color:white">
+                                                                <i class="fa fa-edit"></i>
+                                                            </a>
+                                                            <a href="#" class="on-default remove-row btn btn-danger" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-trash"></i>
+                                                            </a>
+{#                                                            <a  class="on-default edit-row btn btn-warning" style="padding: 0 2px 0 2px; color:white"><i class="fa fa-edit" style="margin-right: 0"></i></a>#}
+{#                                                            <a  class="on-default remove-row btn btn-danger" style="padding: 0 3px 0 3px; color:white"><i class="fa fa-trash" style="margin-right: 0"></i></a>#}
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>SONCAP </td>
+                                                        <td></td>
+                                                        <td>N</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="select">
+                                                            <div>
+                                                                <select class="form-control form-control-primary fill col-sm-12 own_select" disabled>
+                                                                    <option value="yes">Yes</option>
+                                                                    <option value="no">No</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="actions">
+                                                            <a href="#" class="hidden on-editing save-row btn btn-warning" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-save"></i>
+                                                            </a>
+                                                            <a href="#" class="hidden on-editing cancel-row btn btn-danger" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-times"></i>
+                                                            </a>
+                                                            <a href="#" class="on-default edit-row btn btn-warning" style="padding: 0 2px 0 2px; color:white">
+                                                                <i class="fa fa-edit"></i>
+                                                            </a>
+                                                            <a href="#" class="on-default remove-row btn btn-danger" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-trash"></i>
+                                                            </a>
+{#                                                            <a  class="on-default edit-row btn btn-warning" style="padding: 0 2px 0 2px; color:white"><i class="fa fa-edit" style="margin-right: 0"></i></a>#}
+{#                                                            <a  class="on-default remove-row btn btn-danger" style="padding: 0 3px 0 3px; color:white"><i class="fa fa-trash" style="margin-right: 0"></i></a>#}
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>NAFDAC</td>
+                                                        <td></td>
+                                                        <td>N</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="select">
+                                                            <div>
+                                                                <select class="form-control form-control-primary fill col-sm-12 own_select" disabled>
+                                                                    <option value="yes">Yes</option>
+                                                                    <option value="no">No</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="actions">
+                                                            <a href="#" class="hidden on-editing save-row btn btn-warning" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-save"></i>
+                                                            </a>
+                                                            <a href="#" class="hidden on-editing cancel-row btn btn-danger" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-times"></i>
+                                                            </a>
+                                                            <a href="#" class="on-default edit-row btn btn-warning" style="padding: 0 2px 0 2px; color:white">
+                                                                <i class="fa fa-edit"></i>
+                                                            </a>
+                                                            <a href="#" class="on-default remove-row btn btn-danger" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-trash"></i>
+                                                            </a>
+{#                                                            <a  class="on-default edit-row btn btn-warning" style="padding: 0 2px 0 2px; color:white"><i class="fa fa-edit" style="margin-right: 0"></i></a>#}
+{#                                                            <a  class="on-default remove-row btn btn-danger" style="padding: 0 3px 0 3px; color:white"><i class="fa fa-trash" style="margin-right: 0"></i></a>#}
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Duty </td>
+                                                        <td></td>
+                                                        <td>N</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="select">
+                                                            <div>
+                                                                <select class="form-control form-control-primary fill col-sm-12 own_select" disabled>
+                                                                    <option value="yes">Yes</option>
+                                                                    <option value="no">No</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="actions">
+                                                            <a href="#" class="hidden on-editing save-row btn btn-warning" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-save"></i>
+                                                            </a>
+                                                            <a href="#" class="hidden on-editing cancel-row btn btn-danger" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-times"></i>
+                                                            </a>
+                                                            <a href="#" class="on-default edit-row btn btn-warning" style="padding: 0 2px 0 2px; color:white">
+                                                                <i class="fa fa-edit"></i>
+                                                            </a>
+                                                            <a href="#" class="on-default remove-row btn btn-danger" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-trash"></i>
+                                                            </a>
+{#                                                            <a  class="on-default edit-row btn btn-warning" style="padding: 0 2px 0 2px; color:white"><i class="fa fa-edit" style="margin-right: 0"></i></a>#}
+{#                                                            <a  class="on-default remove-row btn btn-danger" style="padding: 0 3px 0 3px; color:white"><i class="fa fa-trash" style="margin-right: 0"></i></a>#}
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Additonal Duty </td>
+                                                        <td></td>
+                                                        <td>N</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="select">
+                                                            <div>
+                                                                <select class="form-control form-control-primary fill col-sm-12 own_select" disabled>
+                                                                    <option value="yes">Yes</option>
+                                                                    <option value="no">No</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="actions">
+                                                            <a href="#" class="hidden on-editing save-row btn btn-warning" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-save"></i>
+                                                            </a>
+                                                            <a href="#" class="hidden on-editing cancel-row btn btn-danger" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-times"></i>
+                                                            </a>
+                                                            <a href="#" class="on-default edit-row btn btn-warning" style="padding: 0 2px 0 2px; color:white">
+                                                                <i class="fa fa-edit"></i>
+                                                            </a>
+                                                            <a href="#" class="on-default remove-row btn btn-danger" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-trash"></i>
+                                                            </a>
+{#                                                            <a  class="on-default edit-row btn btn-warning" style="padding: 0 2px 0 2px; color:white"><i class="fa fa-edit" style="margin-right: 0"></i></a>#}
+{#                                                            <a  class="on-default remove-row btn btn-danger" style="padding: 0 3px 0 3px; color:white"><i class="fa fa-trash" style="margin-right: 0"></i></a>#}
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Capacity to add new item</td>
+                                                        <td></td>
+                                                        <td>N</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="select">
+                                                            <div>
+                                                                <select class="form-control form-control-primary fill col-sm-12 own_select" disabled>
+                                                                    <option value="yes">Yes</option>
+                                                                    <option value="no">No</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td class="actions">
+                                                            <a href="#" class="hidden on-editing save-row btn btn-warning" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-save"></i>
+                                                            </a>
+                                                            <a href="#" class="hidden on-editing cancel-row btn btn-danger" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-times"></i>
+                                                            </a>
+                                                            <a href="#" class="on-default edit-row btn btn-warning" style="padding: 0 2px 0 2px; color:white">
+                                                                <i class="fa fa-edit"></i>
+                                                            </a>
+                                                            <a href="#" class="on-default remove-row btn btn-danger" style="padding: 0 3px 0 3px; color:white">
+                                                                <i class="fa fa-trash"></i>
+                                                            </a>
+{#                                                            <a  class="on-default edit-row btn btn-warning" style="padding: 0 2px 0 2px; color:white"><i class="fa fa-edit" style="margin-right: 0"></i></a>#}
+{#                                                            <a  class="on-default remove-row btn btn-danger" style="padding: 0 3px 0 3px; color:white"><i class="fa fa-trash" style="margin-right: 0"></i></a>#}
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ page content ] end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- [ style Customizer ] start -->
+{#<div id="styleSelector">#}
+{#</div>#}
+<!-- [ style Customizer ] end -->
+{% endblock %}
+
+{% block script %}
+<!-- Custom js -->
+<script src="{% static 'assets/pages/data-table/js/data-table-custom.js'%}"></script>
+<script src="{% static 'assets/js/pcoded.min.js'%}"></script>
+{#<script src="{% static 'assets/js/vertical/vertical-layout.min.js'%}"></script>#}
+<script src="{% static 'assets/js/jquery.mCustomScrollbar.concat.min.js'%}"></script>
+{#<script type="text/javascript">#}
+{#    $(document).ready(function() {#}
+{#        $("#payment_table").DataTable({#}
+{#            dom:#}
+{#                "<'row'<'col-sm-3'l><'col-sm-6 text-center'B><'col-sm-3'f>>" +#}
+{#                "<'row'<'col-sm-12'tr>>" +#}
+{#                "<'row'<'col-sm-5'i><'col-sm-7'p>>",#}
+{#            buttons:[#}
+{#                'copyHtml5',#}
+{#                'csvHtml5',#}
+{#                'excelHtml5',#}
+{#                'pdfHtml5',#}
+{#                'print',#}
+{#            ]#}
+{#        });#}
+{#    });#}
+{#</script>#}
+{% endblock %}

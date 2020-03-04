@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="pcoded-content">
+    <!-- [ breadcrumb ] start -->
+    <div class="page-header">
+        <div class="page-block">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="page-header-title">
+                        <h4>Delivery Details</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ breadcrumb ] end -->
+    <div class="pcoded-inner-content">
+        <div class="main-body">
+            <div class="page-wrapper">
+                <div class="page-body">
+                    <!-- [ page content ] start -->
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12" style="margin:0; padding:0">
+                            <div class="card table-card" style="padding:20px 20px 20px 10px">
+                                <div class="card-block">
+                                    <div class="block" style="margin-left:20px">
+                                        <div class="row">
+                                            <div class="col-sm-5 col-md-5 col-lg-5">
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">REFERENCE NO:</p>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <input class="form-control own_input">
+                                                    </div>
+                                                </div>
+                                                <textarea rows="4" class="form-control" style="border:1px solid #448aff; margin-top:10px; margin-bottom:10px" placeholder="DESCRIPTION"></textarea>
+                                            </div>
+                                            <div class="col-sm-1 col-md-1 col-lg-1"></div>
+                                            <div class="col-sm-5 col-md-5 col-lg-5">
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">ITEM NAME:</p>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <input class="form-control own_input">
+                                                    </div>
+                                                </div>
+                                                <textarea rows="4" class="form-control" style="border:1px solid #448aff; margin-top:10px; margin-bottom:10px" placeholder="INSTRUCTIONS"></textarea>
+                                            </div>
+                                            <div class="col-sm-1 col-md-1 col-lg-1"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-5 col-md-5 col-lg-5">
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">PLACE OF PICKUP:</p>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <input class="form-control own_input">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">CONTACT AT PICKUP:</p>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <input class="form-control own_input">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">PLACE OF DELIVERY:</p>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <input class="form-control own_input">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">CONTACT AT REGISTRATION:</p>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <input class="form-control own_input">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-1 col-md-1 col-lg-1"></div>
+                                            <div class="col-sm-5 col-md-5 col-lg-5">
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">EXACTED DATE OF PICKUP:</p>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <input class="form-control own_input">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">PHONE OF CONTACT:</p>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <input class="form-control own_input">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">EXACTED DATE OF DELIVERY:</p>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <input class="form-control own_input">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">CONTACT AT REGISTRATION:</p>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <input class="form-control own_input">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-1 col-md-1 col-lg-1"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ page content ] end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- [ style Customizer ] start -->
+{#<div id="styleSelector">#}
+{#</div>#}
+<!-- [ style Customizer ] end -->
+{% endblock %}
+
+{% block script %}
+<!-- Custom js -->
+<script src="{% static 'assets/pages/data-table/js/data-table-custom.js'%}"></script>
+<script src="{% static 'assets/js/pcoded.min.js'%}"></script>
+{#<script src="{% static 'assets/js/vertical/vertical-layout.min.js'%}"></script>#}
+<script src="{% static 'assets/js/jquery.mCustomScrollbar.concat.min.js'%}"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#dashboard_table").DataTable();
+    });
+</script>
+{% endblock %}
