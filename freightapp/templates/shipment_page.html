@@ -53,30 +53,30 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td>*</td>
-                                                        <td>*</td>
-                                                        <td>*</td>
-                                                        <td>*</td>
-                                                        <td>*</td>
-                                                        <td>*</td>
-                                                        <td>*</td>
-                                                        <td>*</td>
-                                                        <td>*</td>
-                                                        <td>*</td>
-                                                        <td>*</td>
+                                                        <td>ABC</td>
+                                                        <td>ABC</td>
+                                                        <td>ABC</td>
+                                                        <td>ABC</td>
+                                                        <td>ABC</td>
+                                                        <td>ABC</td>
+                                                        <td>ABC</td>
+                                                        <td>ABC</td>
+                                                        <td>ABC</td>
+                                                        <td>ABC</td>
+                                                        <td>ABC</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>*</td>
-                                                        <td>*</td>
-                                                        <td>*</td>
-                                                        <td>*</td>
-                                                        <td>*</td>
-                                                        <td>*</td>
-                                                        <td>*</td>
-                                                        <td>*</td>
-                                                        <td>*</td>
-                                                        <td>*</td>
-                                                        <td>*</td>
+                                                        <td>ABC</td>
+                                                        <td>ABC</td>
+                                                        <td>ABC</td>
+                                                        <td>ABC</td>
+                                                        <td>ABC</td>
+                                                        <td>ABC</td>
+                                                        <td>ABC</td>
+                                                        <td>ABC</td>
+                                                        <td>ABC</td>
+                                                        <td>ABC</td>
+                                                        <td>ABC</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -171,6 +171,9 @@
                 'print',
             ]
         });
+        $("#shipments_table tbody tr td").on('click', function(){
+            window.location.href = "{% url 'issues_challenges' %}";
+        })
     });
 </script>
 {% endblock %}

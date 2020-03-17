@@ -191,9 +191,9 @@
                                         <h6 class="mt-2">VEHICLE DETAILS</h6>
                                         <div class="row">
                                             <div class="col-sm-2 col-md-2">
-                                                <select class="form-control form-control-primary fill col-sm-12 own_select">
-                                                    <option value="">Yes</option>
-                                                    <option value="">No</option>
+                                                <select id="b_vehicle_registration" class="form-control form-control-primary fill col-sm-12 own_select">
+                                                    <option value="1">Yes</option>
+                                                    <option value="0" selected>No</option>
                                                 </select>
                                             </div>
                                             <div class="col-sm-2 col-md-2">
@@ -207,7 +207,7 @@
                                                         <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">MAKE:</p>
                                                     </div>
                                                     <div class="col-sm-12 col-md-6">
-                                                        <input class="form-control own_input">
+                                                        <input class="form-control own_input vehicle_reg">
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -215,7 +215,7 @@
                                                         <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">OWNER'S NAME:</p>
                                                     </div>
                                                     <div class="col-sm-12 col-md-6">
-                                                        <input class="form-control own_input">
+                                                        <input class="form-control own_input vehicle_reg">
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -223,7 +223,7 @@
                                                         <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">OWNER'S ADDRESS:</p>
                                                     </div>
                                                     <div class="col-sm-12 col-md-6">
-                                                        <input class="form-control own_input">
+                                                        <input class="form-control own_input vehicle_reg">
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -231,7 +231,7 @@
                                                         <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">VEHICLE CAPACITY:</p>
                                                     </div>
                                                     <div class="col-sm-12 col-md-6">
-                                                        <input class="form-control own_input">
+                                                        <input class="form-control own_input vehicle_reg">
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -239,7 +239,7 @@
                                                         <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">BODY STYLE:</p>
                                                     </div>
                                                     <div class="col-sm-12 col-md-6">
-                                                        <input class="form-control own_input">
+                                                        <input class="form-control own_input vehicle_reg">
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -247,7 +247,7 @@
                                                         <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">LOCATION:</p>
                                                     </div>
                                                     <div class="col-sm-12 col-md-6">
-                                                        <input class="form-control own_input">
+                                                        <input class="form-control own_input vehicle_reg">
                                                     </div>
                                                 </div>
                                             </div>
@@ -258,7 +258,7 @@
                                                         <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">LICENSE NO:</p>
                                                     </div>
                                                     <div class="col-sm-12 col-md-6">
-                                                        <input class="form-control own_input">
+                                                        <input class="form-control own_input vehicle_reg">
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -266,7 +266,7 @@
                                                         <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">OWNER'S NUMBER:</p>
                                                     </div>
                                                     <div class="col-sm-12 col-md-6">
-                                                        <input class="form-control own_input">
+                                                        <input class="form-control own_input vehicle_reg">
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -274,7 +274,7 @@
                                                         <p style="font-size: 10px; padding-top:0.5rem; margin-bottom:0">LENGTH:</p>
                                                     </div>
                                                     <div class="col-sm-12 col-md-6">
-                                                        <input class="form-control own_input">
+                                                        <input class="form-control own_input vehicle_reg">
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -315,6 +315,14 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $("#dashboard_table").DataTable();
+        $('#b_vehicle_registration').on("change", function() {
+            var b = this.value;
+            if (b === "1"){
+                $(".vehicle_reg").val("abc");
+            } else {
+                $(".vehicle_reg").val("");
+            }
+        })
     });
 </script>
 {% endblock %}

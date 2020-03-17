@@ -280,7 +280,28 @@ Theme Version: 	2.0.0
 
 				if ( $this.hasClass('actions') ) {
 					_self.rowSetActionsEditing( $row );
-				} else {
+				} else if(i === 0){
+					var select = '<select class="form-control form-control-primary fill col-sm-12 own_select">' +
+					'<option value="Job Commissioned">Job Commissioned</option>' +
+					'<option value="Document Completed">Document Completed</option>' +
+					'<option value="Assessment sent">Assessment sent </option>' +
+					'<option value="Examination Scheduled">Examination Scheduled </option>' +
+					'<option value="Examination Done">Examination Done </option>' +
+					'<option value="Issues and Challenges Notified">Issues and Challenges Notified </option>' +
+					'<option value="Issues and Challenges Resolved">Issues and Challenges Resolved</option>' +
+					'<option value="Shipping/Airline  Line Release">Shipping/Airline  Line Release</option>' +
+					'<option value="Terminal or Storage Release">Terminal or Storage Release</option>' +
+					'<option value="Agency release completed">Agency release completed</option>' +
+					'<option value="Shed Release">Shed Release</option>' +
+					'<option value="Exit Secured">Exit Secured</option>' +
+					'<option value="Delivery in Process">Delivery in Process</option>' +
+					'<option value="Delivery Completed">Delivery Completed</option>' +
+					'<option value="Invoiced">Invoiced</option>' +
+					'<option value="Invoice Paid">Invoice Paid</option>' +
+					'</select>';
+					$this.html(select);
+				}
+				else {
 					$this.html('<input type="text" class="form-control own_input" style="padding:0" value="' + data[i] + '"/>');
 				}
 			});
@@ -296,13 +317,16 @@ Theme Version: 	2.0.0
 				this.$addButton.removeAttr( 'disabled' );
 				$row.removeClass( 'adding' );
 			}
-
+			var z = 0;
 			values = $row.find('td').map(function() {
+				z ++;
 				var $this = $(this);
 
 				if ( $this.hasClass('actions') ) {
 					_self.rowSetActionsDefault( $row );
 					return _self.datatable.cell( this ).data();
+				} else if(z === 1) {
+					return $.trim( $this.find('select').val());
 				} else {
 					return $.trim( $this.find('input').val() );
 				}

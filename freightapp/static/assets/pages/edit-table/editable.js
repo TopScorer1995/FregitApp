@@ -7,7 +7,7 @@ $('#example-1').Tabledit({
     hideIdentifier: true,
     columns: {
         identifier: [0, 'id'],
-        editable: [[1, 'First Name'], [2, 'Last Name']]
+        editable: [[1, 'First Name']]
     }
 });
     $('#example-2').Tabledit({
@@ -35,8 +35,8 @@ cell1.className='abc';
 cell2.className='abc';
 
    $('<span class="tabledit-span" >Click Me To Edit</span><input class="tabledit-input form-control input-sm own_input" type="text" name="First" value="undefined" disabled="">').appendTo(cell1);
-     $('<span class="tabledit-span" >Click Me To Edit</span><input class="tabledit-input form-control input-sm own_input" type="text" name="Last" value="undefined"  disabled="">').appendTo(cell2);
-     $('<span class="tabledit-span" >@mdo</span><select class="tabledit-input form-control input-sm own_input" name="Nickname"  disabled="" ><option value="1">@mdo</option><option value="2">@fat</option><option value="3">@twitter</option></select>').appendTo(cell3);
+   $('<span class="tabledit-span" >Click Me To Edit</span><input class="tabledit-input form-control input-sm own_input" type="text" name="Last" value="undefined"  disabled="">').appendTo(cell2);
+   $('<span class="tabledit-span" >@mdo</span><select class="tabledit-input form-control input-sm own_input" name="Nickname"  disabled="" ><option value="1">@mdo</option><option value="2">@fat</option><option value="3">@twitter</option></select>').appendTo(cell3);
 
 };
 

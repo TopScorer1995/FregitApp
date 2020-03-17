@@ -135,6 +135,10 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="col-md-6 col-sm-6" style="float: right">
+                                            <button id="btn_addnewaction" class="btn btn-primary" style="padding:4px 10px">Save</button>
+                                            <button id="btn_addnewaction" class="btn btn-danger" style="padding:4px 8px">Cancel</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -162,6 +166,9 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $("#dashboard_table").DataTable();
+        $("#btn_addnewaction").on("click", function(){
+           window.location.href = "{% url 'shipment_page' %}";
+        });
     });
 </script>
 {% endblock %}

@@ -165,8 +165,10 @@
                                                     <tr>
                                                         <th scope="row">1</th>
                                                         <td class="tabledit-view-mode"></td>
-                                                        <td class="tabledit-view-mode"><span class="tabledit-span"></span>
-                                                            <input class="tabledit-input form-control input-sm own_input" type="text" name="Last" value="">
+                                                        <td>
+
+{#                                                            <input class="tabledit-input form-control input-sm own_input" type="text" name="Last" value="">#}
+                                                            <select class="form-control form-control-primary fill col-sm-12 own_select"><option value="">***</option><option value="">###</option></select>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -234,7 +236,7 @@
             cell2.className='abc';
 
             $('<span class="tabledit-span"></span><input class="tabledit-input form-control input-sm own_input" type="text" name="Last" value="">').appendTo(cell1);
-            $('<span class="tabledit-span"></span><input class="tabledit-input form-control input-sm own_input" type="text" name="Last" value="">').appendTo(cell2);
+            $('<span class="tabledit-span"></span><select class="form-control form-control-primary fill col-sm-12 own_select"><option value="">***</option><option value="">###</option></select>').appendTo(cell2);
         };
     });
 </script>

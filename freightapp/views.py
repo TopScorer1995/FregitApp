@@ -44,6 +44,10 @@ def clearance_input(request):
     return render(request, 'clearance_process_input.html', {'item': 'clearance', 'subitem': 'clearance_input'})
 
 
+def addactivity(request):
+    return render(request, 'clearance_addactivity.html', {'item': 'clearance', 'subitem': 'addactivity'})
+
+
 def client_registration(request):
     return render(request, 'client_registration.html', {'item': 'client_registration'})
 
@@ -68,8 +72,8 @@ def haulage_packaging(request):
     return render(request, 'haulage_packaging.html', {'item': 'haulage', 'subitem': 'packaging'})
 
 
-def reports(request):
-    return render(request, 'issues_challenges.html', {'item': 'reports'})
+def issues_challenges(request):
+    return render(request, 'issues_challenges.html', {'item': 'issues_challenges'})
 
 
 def shipment_registration(request):

@@ -613,8 +613,8 @@
                                 </a>
                             </div>
                             <div class="col-3 col-sm-2 col-md-2 row">
-                                <a href="{% url 'reports' %}" style="width: 100%">
-                                    <input type="button" class="form-control top_page_buttons {% if item == 'reports' %}selected{% endif %}" value="Job Report">
+                                <a href="{% url 'issues_challenges' %}" style="width: 100%">
+                                    <input type="button" class="form-control top_page_buttons {% if item == 'issues_challenges' %}selected{% endif %}" value="Job Report">
                                 </a>
                             </div>
                         </div>
@@ -721,7 +721,7 @@
                                             </ul>
                                         </li>
                                         <li class="pcoded-hasmenu {% if item == 'reports' %}active pcoded-trigger{% endif %}">
-                                            <a href="{% url 'reports' %}" class="waves-effect waves-dark">
+                                            <a href="javascript:void(0)" class="waves-effect waves-dark">
                                             <span class="pcoded-micon"><i class="feather icon-book"></i></span>
                                             <span class="pcoded-mtext">Reports</span>
                                             </a>
